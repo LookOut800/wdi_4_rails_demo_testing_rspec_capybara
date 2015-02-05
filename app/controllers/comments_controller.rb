@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
   def new
     @article = Article.find(params[:article_id])
-    @comment = Comment.new(article_params)
+    @comment = Comment.new
   end
 
 private

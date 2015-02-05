@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Managing articles' do
   scenario 'List all articles' do
+    Article.destroy_all
     Article.create!(title: 'One Stupid Trick', body: "You won't believe what they did next...")
     Article.create!(title: 'One Stupid Trick', body: "You won't believe what they did next...")
     Article.create!(title: 'One Stupid Trick', body: "You won't believe what they did next...")
