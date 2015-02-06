@@ -18,7 +18,7 @@ RSpec.describe CommentsController do
 
     it 'assigns @comments' do
       get :index, article_id: @article.id
-      expect(assigns(:comments)).to eq @comments
+      expect(assigns(:comments)).to eq  @comments
     end
   end
 
