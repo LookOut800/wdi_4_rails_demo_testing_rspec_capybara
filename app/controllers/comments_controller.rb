@@ -10,8 +10,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-       @article = Article.find(params[:article_id])
-       @comment = @article.comments.create(comment_params)
+   @article = Article.find(params[:article_id])
+   @comment = @article.comments.create(comment_params)
 
     if @comment.save
       flash[:success] = 'Comment successfully created.'
@@ -20,6 +20,12 @@ class CommentsController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.create(comment_params)
+  end
+
 
 private
   def article_params
